@@ -14,7 +14,7 @@ function generatePassword(){
 // wirte all code here.
 
 //pseudocode
-//Present user series of prompts/confirms
+//1. Present user series of prompts/confirms
   // let sign = prompt("Whats your sign?")
   //length prompt - var lengthChoice
      // confirm("press a button!")
@@ -22,14 +22,14 @@ function generatePassword(){
   // upper confirm - var upperChoice
   // nums confirm - var numsChoice
   // special confirm - var spcChoice
-//Length prompt / number between 8-128
+//2. Length prompt / number between 8-128
   // if conditional to check if length is between 8-128
     // if true, continue to confirm, if false ask for lenght again
       // var lengthChoice = prompt("Please choose a length between 8-128 characters.")
 //confirm for lower, upper , nums and special
-//Input validation - correct nums atleast 1 character chosen
+//3. Input validation - correct nums atleast 1 character chosen
   // if/ conditional check using || (or), if false ask again
-//Randomly generate password string from choices
+//4. Randomly generate password string from choices
   // arrays of lower, upper, nums and special
   // array of all chosen characters (concat)
   // choose from all options array number of characters required(length prompt)
@@ -40,7 +40,7 @@ function generatePassword(){
     //make new array from randomly chosen characters(methods)
     // convert array to string(method)
     // return string (alert with password to the screen)
-//display password in text box- write in page
+//5. display password in text box- write in page
 
 var lengthChoice = prompt("Please choose a length between 8-128 characters.")
 console.log("Lenght " + lengthChoice)
@@ -85,6 +85,8 @@ if (7 < lengthChoice && lengthChoice < 129) {
       var passwordString = passwordString.concat(randomPick);
     }
     console.log(passwordString)
+    return passwordString.join("");
+
   } else {
     alert("Need at least one character type.")
     generatePassword();
